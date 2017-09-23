@@ -1,6 +1,6 @@
 (ns {{name}}.stuff
   (:require
-    [clojure.core.async :refer [<! go-loop]]
+    [clojure.core.async :refer [<! chan go-loop]]
     [puget.printer :refer [cprint]]))
 
 (def stuff-ch (chan))
