@@ -1,15 +1,15 @@
-(ns leiningen.new.cycle
+(ns leiningen.new.cycledd
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "cycle"))
+(def render (renderer "cycledd"))
 
-(defn cycle
+(defn cycledd
   "FIXME: write documentation"
   [name]
   (let [data {:name name
               :sanitized (name-to-path name)}]
-    (main/info "Generating fresh 'lein new' cycle project.")
+    (main/info "Generating fresh 'lein new' cycledd project.")
     (->files data
              [
              ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
